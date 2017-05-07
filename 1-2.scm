@@ -1,0 +1,5 @@
+(define (sum-iter data)
+    (define (sum list ans)
+        (cond ((null? list) ans)
+            (else (sum (cdr list) (+ ans (car list))))))
+    (sum data 0))
